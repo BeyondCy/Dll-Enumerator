@@ -68,8 +68,7 @@ BOOL Processf(DWORD dwProcessId)
      TCHAR szWrite[1024] = {0};
 
      
-     hProcess = OpenProcess(PROCESS_QUERY_INFORMATION |
-                            PROCESS_VM_READ,
+     hProcess = OpenProcess(PROCESS_ALL_ACCESS,
                             FALSE, dwProcessId);
                             
      if(hProcess != NULL)
